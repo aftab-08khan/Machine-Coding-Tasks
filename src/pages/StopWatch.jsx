@@ -17,7 +17,7 @@ const StopWatch = () => {
           setSeconds(0);
           setMiuntes((prev) => (prev += 1));
         }
-      }, 100);
+      }, 1000);
     } else {
       clearInterval(timer);
     }
