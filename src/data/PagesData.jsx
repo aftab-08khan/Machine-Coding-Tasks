@@ -3,6 +3,7 @@ import GridsLights from "../pages/GridsLights";
 import Home from "../pages/Home";
 import StopWatch from "../pages/StopWatch";
 import TodoList from "../pages/TodoList";
+import VsCodeTask from "../pages/VsCodeTask";
 
 export const PagesData = [
   {
@@ -28,5 +29,11 @@ export const PagesData = [
     screen: <GridsLights />,
     name: "Grids Lights  ",
     id: 4,
+  },
+  {
+    link: "/vsCodeFilesFolder",
+    screen: <VsCodeTask />,
+    name: "Vs Code Files And Folders ",
+    id: 5,
   },
 ];

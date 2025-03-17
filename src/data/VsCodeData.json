@@ -1,0 +1,27 @@
+[
+  {
+    "type": "folder",
+    "name": "public",
+    "subNodes": [
+      {
+        "type": "file",
+        "name": "vite svg"
+      }
+    ]
+  },
+  {
+    "type": "folder",
+    "name": "src",
+    "subNodes": [
+      {
+        "type": "folder",
+        "name": "assests"
+      }
+    ]
+  },
+  {
+    "type": "file",
+
+    "name": "package.json"
+  }
+]

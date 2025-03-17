@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ContentWrapper from "../components/ContentWrapper";
 import TaskOverview from "../components/TaskOverview";
 import BackButton from "../components/BackButton";
+import Heading from "../components/Heading";
 
 const GridsLights = () => {
   const [arr, setArr] = useState([]);
@@ -43,8 +44,7 @@ const GridsLights = () => {
         Click on a box to light it up. Once all boxes are filled, they will turn
         off in the order they were clicked.
       </TaskOverview>
-      <h1 className="text-2xl font-bold text-center mb-4">Grids Lights</h1>
-
+      <Heading>Grids Lights</Heading>
       <div className="grid grid-cols-2 gap-4 place-items-center">
         {[0, 1, 2, 3].map((i) => (
           <div
