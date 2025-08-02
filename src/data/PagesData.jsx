@@ -1,3 +1,4 @@
+import Counter from "../pages/Counter";
 import FetchAndDisplayData from "../pages/FetchAndDisplayData";
 import FormDataCards from "../pages/FormDataCards";
 import GridsLights from "../pages/GridsLights";
@@ -54,5 +55,10 @@ export const PagesData = [
     link: "/themeToggle",
     screen: <ThemeToggle />,
     name: "Build a Dark Mode Toggle",
+  },
+  {
+    link: "/counter",
+    screen: <Counter />,
+    name: "Build a Counter using Redux",
   },
 ];
