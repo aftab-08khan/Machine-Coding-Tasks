@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ContentWrapper from "../components/ContentWrapper";
 import BackButton from "../components/BackButton";
 import TaskOverview from "../components/TaskOverview";
+import Title from "../components/Title";
 
 const StopWatch = () => {
   let [seconds, setSeconds] = useState(0);
@@ -38,11 +39,9 @@ const StopWatch = () => {
         pause, and reset the timer. The stopwatch will count time in minutes and
         seconds, updating dynamically.
       </TaskOverview>
-      <div className="w-full max-w-md mx-auto bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 text-center">
-        <h1 className="text-2xl font-bold text-indigo-800 dark:text-indigo-300 mb-4">
-          Stop Watch
-        </h1>
-        <div className="flex justify-center items-center space-x-4 text-4xl font-semibold text-gray-900 dark:text-gray-200 mb-6">
+      <div className="w-full max-w-md mx-auto bg-white shadow-lg rounded-lg p-6 text-center">
+        <Title>StopWatch</Title>
+        <div className="flex justify-center items-center space-x-4 text-4xl font-semibold text-gray-900 mb-6">
           <span>{minutes.toString().padStart(2, "0")}</span>:
           <span>{seconds.toString().padStart(2, "0")}</span>
         </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ContentWrapper from "../components/ContentWrapper";
 import BackButton from "../components/BackButton";
 import TaskOverview from "../components/TaskOverview";
+import Heading from "../components/Heading";
 
 const FormDataCards = () => {
   const [formDataArr, setFormDataArr] = useState({
@@ -10,6 +11,7 @@ const FormDataCards = () => {
     age: "",
   });
   const [submittedData, setSubmittedData] = useState([]);
+
   const handleInputChange = (e) => {
     const { value, name } = e.target;
     setFormDataArr((prev) => ({
@@ -36,13 +38,12 @@ const FormDataCards = () => {
         submission, the entered data will be displayed. The form fields will
         reset after submission.
       </TaskOverview>
-      <div className="max-w-xl w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
-        <h2 className="text-2xl font-bold text-center text-indigo-800 dark:text-indigo-300 mb-6">
-          Fill Your Details
-        </h2>
+
+      <div className="max-w-xl w-full bg-white shadow-lg rounded-lg p-6">
+        <Heading>Fill Your Details</Heading>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-gray-700 dark:text-gray-300 font-medium mb-1">
+            <label className="block text-gray-700 font-medium mb-1">
               First Name
             </label>
             <input
@@ -52,11 +53,11 @@ const FormDataCards = () => {
               value={formDataArr.fname}
               placeholder="Enter your First Name"
               required
-              className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+              className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:outline-none"
             />
           </div>
           <div>
-            <label className="block text-gray-700 dark:text-gray-300 font-medium mb-1">
+            <label className="block text-gray-700 font-medium mb-1">
               Last Name
             </label>
             <input
@@ -66,13 +67,11 @@ const FormDataCards = () => {
               value={formDataArr.lname}
               placeholder="Enter your Last Name"
               required
-              className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+              className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:outline-none"
             />
           </div>
           <div>
-            <label className="block text-gray-700 dark:text-gray-300 font-medium mb-1">
-              Age
-            </label>
+            <label className="block text-gray-700 font-medium mb-1">Age</label>
             <input
               onChange={handleInputChange}
               name="age"
@@ -80,7 +79,7 @@ const FormDataCards = () => {
               value={formDataArr.age}
               placeholder="Enter your Age"
               required
-              className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:outline-none dark:bg-gray-700 dark:text-white"
+              className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:outline-none"
             />
           </div>
           <button
@@ -92,26 +91,26 @@ const FormDataCards = () => {
         </form>
       </div>
 
-      <div className="max-w-xl w-full mt-6 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md">
+      <div className="max-w-xl w-full mt-6 p-4 bg-gray-100 rounded-lg shadow-md">
         {submittedData.length > 0 ? (
           submittedData.map((item, i) => (
             <div key={i} className="mb-6">
-              <h3 className="text-lg font-semibold text-indigo-800 dark:text-indigo-300 mb-2">
+              <h3 className="text-lg font-semibold text-indigo-800 mb-2">
                 Submitted Details:
               </h3>
-              <p className="text-gray-800 dark:text-gray-200">
+              <p className="text-gray-800">
                 <strong>First Name:</strong> {item.fname}
               </p>
-              <p className="text-gray-800 dark:text-gray-200">
+              <p className="text-gray-800">
                 <strong>Last Name:</strong> {item.lname}
               </p>
-              <p className="text-gray-800 dark:text-gray-200">
+              <p className="text-gray-800">
                 <strong>Age:</strong> {item.age}
               </p>
             </div>
           ))
         ) : (
-          <p className="text-gray-600 dark:text-gray-300 text-center">
+          <p className="text-gray-600 text-center">
             Fill the above form to see the details.
           </p>
         )}

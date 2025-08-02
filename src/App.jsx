@@ -4,13 +4,22 @@ import { PagesData } from "./data/PagesData";
 import Home from "./pages/Home";
 
 const App = () => {
+  const updatedData = PagesData.map((obj) => {
+    return {
+      ...obj,
+      id: Math.random(Date.now()),
+    };
+  });
+
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route element={<Home />} index />
-          {PagesData?.map((item, i) => {
-            return <Route element={item?.screen} path={item?.link} key={i} />;
+          <Route element={<Home data={updatedData} />} index />
+          {updatedData?.map((item) => {
+            return (
+              <Route element={item?.screen} path={item?.link} key={item?.id} />
+            );
           })}
         </Routes>
       </BrowserRouter>

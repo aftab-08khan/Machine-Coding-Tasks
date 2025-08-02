@@ -54,7 +54,7 @@ const VsCodeTask = () => {
   return (
     <ContentWrapper>
       <BackButton />
-      <div className="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
+      <div className="p-6 bg-gray-100 rounded-lg shadow-lg">
         <Heading>VS Code Files and Folder Explorer</Heading>
 
         <div className="mt-4 space-y-2">
@@ -66,7 +66,7 @@ const VsCodeTask = () => {
                 ) : (
                   <FaFileAlt className="text-gray-500" />
                 )}
-                <span className="text-lg font-medium text-gray-800 dark:text-gray-200">
+                <span className="text-lg font-medium text-gray-800">
                   {item.name}
                 </span>
 
@@ -100,9 +100,7 @@ const VsCodeTask = () => {
                       ) : (
                         <FaFileAlt className="text-gray-500" />
                       )}
-                      <span className="text-gray-700 dark:text-gray-300">
-                        {node.name}
-                      </span>
+                      <span className="text-gray-700">{node.name}</span>
 
                       {node.type === "folder" && (
                         <>
