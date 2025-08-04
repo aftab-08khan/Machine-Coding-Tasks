@@ -9,18 +9,20 @@ import StopWatch from "../pages/StopWatch";
 import ThemeToggle from "../pages/ThemeToggle";
 import TodoList from "../pages/TodoList";
 import VsCodeTask from "../pages/VsCodeTask";
-
+import Tabs from "../pages/Tabs";
+import StarRating from "../pages/StarRating";
 export const PagesData = [
+  {
+    link: "/loginFormWithValidation",
+    screen: <LoginFormWithValidation />,
+    name: "Login Form With Validation",
+  },
   {
     link: "/todoList",
     screen: <TodoList />,
     name: "Todo List",
   },
-  {
-    link: "/stopWatch",
-    screen: <StopWatch />,
-    name: "Stop Watch ",
-  },
+
   {
     link: "/FormDataToCards",
     screen: <FormDataCards />,
@@ -37,15 +39,16 @@ export const PagesData = [
     name: "Vs Code Files And Folders ",
   },
   {
+    link: "/stopWatch",
+    screen: <StopWatch />,
+    name: "Stop Watch ",
+  },
+  {
     link: "/searchFilterInput",
     screen: <SearchFilterInput />,
     name: "Search Filter Input",
   },
-  {
-    link: "/loginFormWithValidation",
-    screen: <LoginFormWithValidation />,
-    name: "Login Form With Validation",
-  },
+
   {
     link: "/fetchAndDisplayData",
     screen: <FetchAndDisplayData />,
@@ -60,5 +63,15 @@ export const PagesData = [
     link: "/counter",
     screen: <Counter />,
     name: "Build a Counter using Redux",
+  },
+  {
+    link: "/tabs",
+    screen: <Tabs />,
+    name: "Build Tabs Components",
+  },
+  {
+    link: "/starRating",
+    screen: <StarRating />,
+    name: "Build Star Ratings Components",
   },
 ];

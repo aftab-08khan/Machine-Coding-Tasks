@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Home = ({ data }) => {
   return (
     <ContentWrapper>
-      <div className="max-w-4xl mx-auto py-4 text-center">
+      <div className="max-w-5xl mx-auto py-4 text-center">
         <h1 className="text-4xl font-bold tracking-wide text-indigo-900">
           Welcome to the Machine Coding Tasks Dashboard
         </h1>
@@ -16,7 +16,7 @@ const Home = ({ data }) => {
             <Link
               to={page.link}
               key={page.id}
-              className="block capitalize bg-gray-200 shadow-md hover:shadow-lg transition-all rounded-lg p-6 text-xl font-semibold text-indigo-900 hover:bg-indigo-200"
+              className="block capitalize bg-gray-200 shadow-md hover:shadow-lg transition-all rounded-lg p-4 py-5 text-xl font-semibold text-indigo-900 hover:bg-indigo-200"
             >
               {page.name}
             </Link>
