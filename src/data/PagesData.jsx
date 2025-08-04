@@ -11,6 +11,7 @@ import TodoList from "../pages/TodoList";
 import VsCodeTask from "../pages/VsCodeTask";
 import Tabs from "../pages/Tabs";
 import StarRating from "../pages/StarRating";
+import PasswordStrengthMeter from "../pages/PasswordStrengthMeter";
 export const PagesData = [
   {
     link: "/loginFormWithValidation",
@@ -73,5 +74,10 @@ export const PagesData = [
     link: "/starRating",
     screen: <StarRating />,
     name: "Build Star Ratings Components",
+  },
+  {
+    link: "/password-strength-meter",
+    screen: <PasswordStrengthMeter />,
+    name: "Implement a Password Strength Meter",
   },
 ];
