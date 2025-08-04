@@ -36,12 +36,13 @@ const FetchAndDisplayData = () => {
     return (
       <ContentWrapper>
         <BackButton />
-        <div className="max-w-4xl w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
+        <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg p-6">
           <div className="animate-pulse grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[...Array(6)].map((_, index) => (
               <div
                 key={index}
-                className="h-80 bg-gray-200 dark:bg-gray-700 rounded-2xl"
+                className="h-80 bg-gray-200 
+                rounded-2xl"
               ></div>
             ))}
           </div>
@@ -54,8 +55,8 @@ const FetchAndDisplayData = () => {
     return (
       <ContentWrapper>
         <BackButton />
-        <div className="max-w-4xl w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
-          <div className="text-red-500 dark:text-red-400 p-4 border border-red-300 dark:border-red-700 rounded-lg bg-red-50 dark:bg-red-900/20">
+        <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg p-6">
+          <div className="text-red-500 p-4 border border-red-300 rounded-lg bg-red-50 ">
             <p className="font-bold">Error loading products:</p>
             <p>{error}</p>
             <button
@@ -89,7 +90,7 @@ const FetchAndDisplayData = () => {
           productsData.map((product) => (
             <div
               key={product.id}
-              className="flex flex-col items-center p-4 rounded-2xl bg-gray-100 dark:bg-gray-700 hover:shadow-md transition-shadow"
+              className="flex flex-col items-center p-4 rounded-2xl bg-gray-100 hover:shadow-md transition-shadow"
             >
               <img
                 src={product.image}
@@ -97,23 +98,23 @@ const FetchAndDisplayData = () => {
                 className="w-48 h-48 object-contain mb-4"
                 loading="lazy"
               />
-              <h3 className="text-lg font-medium text-center text-gray-800 dark:text-gray-200 line-clamp-2 mb-2">
+              <h3 className="text-lg font-medium text-center text-gray-800 line-clamp-2 mb-2">
                 {product.title}
               </h3>
-              <span className="text-sm px-3 py-1 rounded-full bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 mb-2">
+              <span className="text-sm px-3 py-1 rounded-full bg-green-100 text-green-800 mb-2">
                 {product.category}
               </span>
-              <span className="text-xl font-bold text-gray-900 dark:text-white">
+              <span className="text-xl font-bold text-gray-900">
                 ${product.price.toFixed(2)}
               </span>
-              <span className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+              <span className="text-sm text-gray-500 mt-1">
                 Rating: {product.rating?.rate || "N/A"} (
                 {product.rating?.count || 0})
               </span>
             </div>
           ))
         ) : (
-          <div className="col-span-full text-center py-12 text-gray-500 dark:text-gray-400">
+          <div className="col-span-full text-center py-12 text-gray-500">
             <p className="text-xl">No products found</p>
             <button
               onClick={() => window.location.reload()}
