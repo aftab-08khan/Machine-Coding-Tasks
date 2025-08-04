@@ -4,25 +4,20 @@ import BackButton from "../components/BackButton";
 import TaskOverview from "../components/TaskOverview";
 import Heading from "../components/Heading";
 import { FaStar, FaRegStar } from "react-icons/fa6";
-
 import { FaRegStarHalfStroke } from "react-icons/fa6";
 
 const StarRating = () => {
   const [input, setInput] = useState("");
-  const [ratings, setRatings] = useState("");
-  const handleInputChange = (e) => {
-    setInput(e.target.value);
-  };
-  const handleFormSubmit = (e) => {
+  const [rating, setRating] = useState("");
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setRatings(input);
+    setRating(Number(input));
     setInput("");
   };
 
-  const rating = parseFloat(ratings);
-  const fullStars = Math.floor(rating);
-  const hasHalfStar = rating % 1 !== 0;
-  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+  const isHalfStar = rating % 1 !== 0;
+  const emptyStars = 5 - rating;
 
   return (
     <ContentWrapper>
@@ -38,20 +33,20 @@ const StarRating = () => {
 
       <Heading>Star Rating Component</Heading>
       <div className="max-w-2xl w-full  bg-white shadow-lg rounded-lg p-6">
-        <form className="flex gap-2 mb-6" onSubmit={handleFormSubmit}>
+        <form className="flex gap-2 mb-6" onSubmit={handleSubmit}>
           <div className="flex-1">
             <label className="block text-gray-700  font-medium mb-1">
               Range 0.5 to 5 ratings
             </label>
 
             <input
+              value={input}
+              name="ratings"
               min={0.5}
               max={5}
-              step="0.5"
-              value={input}
-              onChange={(e) => handleInputChange(e)}
+              step={0.5}
               type="number"
-              name="ratings"
+              onChange={(e) => setInput(e.target.value)}
               className="w-full p-2 border-2 border-indigo-400 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder="Enter a Ratings..."
             />
@@ -60,20 +55,19 @@ const StarRating = () => {
             Submit
           </button>
         </form>
-
-        {ratings > 0 && (
-          <div className="flex justify-center text-yellow-500 text-3xl">
-            {Array(fullStars)
+        {rating > 0 && (
+          <div className="flex items-center justify-center">
+            {Array(Math.floor(rating))
               .fill()
               .map((_, i) => (
-                <FaStar key={`full-${i}`} />
+                <FaStar key={i} />
               ))}
-            {hasHalfStar && <FaRegStarHalfStroke key="half" />}
-            {Array(emptyStars)
-              .fill()
-              .map((_, i) => (
-                <FaRegStar key={`empty-${i}`} />
-              ))}
+            {isHalfStar && <FaRegStarHalfStroke />}
+            {emptyStars > 0
+              ? Array(Math.floor(emptyStars))
+                  .fill()
+                  .map((_, i) => <FaRegStar key={i} />)
+              : ""}
           </div>
         )}
       </div>
