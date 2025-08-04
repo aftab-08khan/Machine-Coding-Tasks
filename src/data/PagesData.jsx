@@ -11,6 +11,7 @@ import TodoList from "../pages/TodoList";
 import VsCodeTask from "../pages/VsCodeTask";
 import Tabs from "../pages/Tabs";
 import StarRating from "../pages/StarRating";
+import Modal from "../pages/Modal";
 export const PagesData = [
   {
     link: "/loginFormWithValidation",
@@ -73,5 +74,10 @@ export const PagesData = [
     link: "/starRating",
     screen: <StarRating />,
     name: "Build Star Ratings Components",
+  },
+  {
+    link: "/modal",
+    screen: <Modal />,
+    name: "Build Modal Components",
   },
 ];
