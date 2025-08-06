@@ -12,6 +12,8 @@ import VsCodeTask from "../pages/VsCodeTask";
 import Tabs from "../pages/Tabs";
 import StarRating from "../pages/StarRating";
 import PasswordStrengthMeter from "../pages/PasswordStrengthMeter";
+import Modal from "../pages/Modal";
+import ToggleAccordion from "../pages/ToggleAccordion";
 export const PagesData = [
   {
     link: "/loginFormWithValidation",
@@ -79,5 +81,15 @@ export const PagesData = [
     link: "/password-strength-meter",
     screen: <PasswordStrengthMeter />,
     name: "Implement a Password Strength Meter",
+  },
+  {
+    link: "/modal",
+    screen: <Modal />,
+    name: "Build Modal Components",
+  },
+  {
+    link: "/toggleAccordion",
+    screen: <ToggleAccordion />,
+    name: "Build Accordion Components",
   },
 ];

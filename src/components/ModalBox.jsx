@@ -5,7 +5,7 @@ const ModalBox = ({ setOpen }) => {
   return (
     <div
       onClick={(e) => e.stopPropagation()}
-      className="max-w-2xl w-full  bg-white shadow-lg rounded-lg p-6"
+      className="max-w-2xl w-full bg-white shadow-lg rounded-lg p-6"
     >
       <Heading>Welcome to Machine Coding Task , This is Modal Box Task</Heading>
       <button
