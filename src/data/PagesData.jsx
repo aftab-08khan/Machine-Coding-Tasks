@@ -14,6 +14,7 @@ import StarRating from "../pages/StarRating";
 import PasswordStrengthMeter from "../pages/PasswordStrengthMeter";
 import Modal from "../pages/Modal";
 import ToggleAccordion from "../pages/ToggleAccordion";
+import SearchWithDebounce from "../pages/SearchWithDebounce";
 export const PagesData = [
   {
     link: "/loginFormWithValidation",
@@ -91,5 +92,10 @@ export const PagesData = [
     link: "/toggleAccordion",
     screen: <ToggleAccordion />,
     name: "Build Accordion Components",
+  },
+  {
+    link: "/searchFilterInputDebounce",
+    screen: <SearchWithDebounce />,
+    name: "Real-time search with debouncing",
   },
 ];
