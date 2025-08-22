@@ -10,7 +10,7 @@ const SearchWithDebounce = () => {
   const [userData, setUserData] = useState([]);
   const [originalData, setOriginalData] = useState([]);
 
-  const timerRef = useRef(null);
+  let timerRef = useRef(null);
   useEffect(() => {
     const fetchData = async () => {
       try {

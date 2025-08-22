@@ -15,6 +15,7 @@ import PasswordStrengthMeter from "../pages/PasswordStrengthMeter";
 import Modal from "../pages/Modal";
 import ToggleAccordion from "../pages/ToggleAccordion";
 import SearchWithDebounce from "../pages/SearchWithDebounce";
+import CopyToClipboard from "../pages/CopyToClipboard";
 export const PagesData = [
   {
     link: "/loginFormWithValidation",
@@ -97,5 +98,10 @@ export const PagesData = [
     link: "/searchFilterInputDebounce",
     screen: <SearchWithDebounce />,
     name: "Real-time search with debouncing",
+  },
+  {
+    link: "/copyToClipboard",
+    screen: <CopyToClipboard />,
+    name: "Add a Copy to Clipboard button",
   },
 ];
