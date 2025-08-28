@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const BackButton = () => {
   return (
     <Link
-      to={"/"}
-      className="px-5 py-2 bg-indigo-600 text-white text-lg font-semibold rounded-lg shadow-md flex items-center self-start gap-2 transition-all hover:bg-indigo-500 hover:shadow-lg active:scale-95 mb-4 justify-center"
+      to="/"
+      className="px-5 py-2 bg-neutral-800 text-white text-lg font-semibold rounded-lg shadow-md flex items-center self-start gap-2 transition-all hover:bg-neutral-700 hover:shadow-lg active:scale-95 mb-4 justify-center border border-white/10"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

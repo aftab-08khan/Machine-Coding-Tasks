@@ -5,12 +5,15 @@ const ModalBox = ({ setOpen }) => {
   return (
     <div
       onClick={(e) => e.stopPropagation()}
-      className="max-w-2xl w-full bg-white shadow-lg rounded-lg p-6"
+      className="max-w-2xl w-full bg-neutral-900/80 backdrop-blur-md shadow-xl rounded-lg p-6 border border-white/10 text-white"
     >
-      <Heading>Welcome to Machine Coding Task , This is Modal Box Task</Heading>
+      {/* Heading */}
+      <Heading>Welcome to Machine Coding Task, This is Modal Box Task</Heading>
+
+      {/* Close Button */}
       <button
-        onClick={() => setOpen(!open)}
-        className="px-5 py-2 bg-indigo-600 text-white text-lg font-semibold rounded-lg shadow-md flex gap-2 transition-all hover:bg-indigo-500 hover:shadow-lg active:scale-95 self-center justify-self-center"
+        onClick={() => setOpen(false)}
+        className="mt-6 px-5 py-2 bg-neutral-800 text-white text-lg font-semibold rounded-lg shadow-md flex gap-2 transition-all hover:bg-neutral-700 hover:shadow-lg active:scale-95 self-center justify-self-center border border-white/10"
       >
         Close Dialog
       </button>

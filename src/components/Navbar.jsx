@@ -13,13 +13,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-gray-300 text-gray-800 shadow-md">
+    <nav className="sticky top-0 z-50 bg-neutral-950 text-white shadow-lg border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link
             to="/"
-            className="text-2xl font-bold text-indigo-700 hover:text-indigo-800 transition-colors"
+            className="text-2xl font-bold text-white hover:text-gray-300 transition-colors"
           >
             CodeDashboard
           </Link>
@@ -30,10 +30,10 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.link}
-                className={`px-3 py-2 rounded-md text-lg font-medium transition-colors ${
+                className={`px-3 py-2 rounded-md text-lg font-medium transition-all duration-300 ${
                   location.pathname === item.link
-                    ? "bg-indigo-600 text-indigo-100"
-                    : "text-indigo-800 hover:bg-indigo-600 hover:text-white"
+                    ? "bg-neutral-800 text-white"
+                    : "text-gray-300 hover:bg-neutral-800 hover:text-white"
                 }`}
               >
                 {item.name}
@@ -45,7 +45,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="p-2 rounded-md text-gray-300 hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-gray-600"
               aria-label={isOpen ? "Close menu" : "Open menu"}
             >
               {isOpen ? (
@@ -87,11 +87,11 @@ const Navbar = () => {
       {/* Mobile Menu Modal */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/50 flex justify-center items-center z-50 transition-opacity duration-300"
+          className="fixed inset-0 bg-black/70 flex justify-center items-center z-50 transition-opacity duration-300"
           onClick={() => setIsOpen(false)}
         >
           <div
-            className="bg-indigo-800 rounded-xl w-80 max-w-xs p-6 flex flex-col gap-4"
+            className="bg-neutral-900/90 backdrop-blur-lg border border-white/10 rounded-xl w-80 max-w-xs p-6 flex flex-col gap-4 shadow-lg"
             onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
           >
             {navItems.map((item) => (
@@ -101,8 +101,8 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className={`px-4 py-2 rounded-md text-lg font-medium transition-colors text-center ${
                   location.pathname === item.link
-                    ? "bg-indigo-600 text-indigo-200"
-                    : "text-white hover:bg-indigo-600"
+                    ? "bg-neutral-800 text-white"
+                    : "text-gray-300 hover:bg-neutral-700 hover:text-white"
                 }`}
               >
                 {item.name}

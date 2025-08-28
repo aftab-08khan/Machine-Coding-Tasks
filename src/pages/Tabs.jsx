@@ -19,9 +19,9 @@ const Tabs = () => {
     avatar: "",
   });
   const [active, setActive] = useState(false);
+
   const handleInputChange = (e) => {
     const { value, name, files } = e.target;
-
     setFormData((prev) => ({
       ...prev,
       [name]: name === "avatar" ? files[0] : value,
@@ -33,7 +33,6 @@ const Tabs = () => {
       setCurrentStep("Step 1");
       return;
     }
-
     if (button === "Step 2") {
       if (formData.firstName && formData.lastName) {
         setCurrentStep("Step 2");
@@ -43,10 +42,7 @@ const Tabs = () => {
       }
       return;
     }
-
     if (button === "Step 3") {
-      console.log(formData, "data");
-
       if (
         formData.firstName &&
         formData.lastName &&
@@ -61,64 +57,64 @@ const Tabs = () => {
       return;
     }
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setActive(true);
-
     setCurrentStep(null);
   };
+
   return (
-    <ContentWrapper>
+    <ContentWrapper className="bg-gray-900 min-h-screen">
       <BackButton />
       <TaskOverview>
         Build a multi-step form using a Tabs component. Each tab represents a
         step in the form:
-        <ul className="list-disc pl-5 mt-2 space-y-1">
+        <ul className="list-disc pl-5 mt-2 space-y-1 text-gray-300">
           <li>
             <strong>Step 1</strong> collects basic information (first and last
-            name),
+            name)
           </li>
           <li>
             <strong>Step 2</strong> captures demographic details (age and
             gender)
           </li>
           <li>
-            <strong>Step 3</strong> allows avatar upload with an image preview.
-            The user should be guided through each step with validation checks
-            in place to ensure smooth and structured data collection.
+            <strong>Step 3</strong> allows avatar upload with an image preview
           </li>
         </ul>
       </TaskOverview>
 
-      <Heading>Build a Tabs component</Heading>
-      <div className="max-w-4xl w-full  bg-white shadow-lg rounded-lg p-6">
+      <Heading className="text-white">Build a Tabs component</Heading>
+      <div className="max-w-4xl w-full bg-gray-800 shadow-lg rounded-lg p-6 text-white">
         {!active && (
-          <div className="flex justify-center gap-5">
-            {buttons.map((button) => {
-              return (
-                <button
-                  key={button}
-                  onClick={() => handleStepsButton(button)}
-                  className="px-5 py-2 bg-indigo-600 text-white text-lg font-semibold rounded-lg shadow-md flex items-center self-start gap-2 transition-all hover:bg-indigo-500 hover:shadow-lg active:scale-95 mb-4 justify-center"
-                >
-                  {button}
-                </button>
-              );
-            })}
+          <div className="flex justify-center gap-5 mb-4">
+            {buttons.map((button) => (
+              <button
+                key={button}
+                onClick={() => handleStepsButton(button)}
+                className="px-5 py-2 bg-indigo-600 text-white text-lg font-semibold rounded-lg shadow-md flex items-center justify-center gap-2 hover:bg-indigo-500 hover:shadow-lg active:scale-95 transition-all"
+              >
+                {button}
+              </button>
+            ))}
           </div>
         )}
+
         <div>
-          {currentStep === "Step 1" ? (
+          {currentStep === "Step 1" && (
             <Step1 formData={formData} onChange={handleInputChange} />
-          ) : currentStep === "Step 2" ? (
+          )}
+          {currentStep === "Step 2" && (
             <Step2 formData={formData} onChange={handleInputChange} />
-          ) : currentStep === "Step 3" ? (
+          )}
+          {currentStep === "Step 3" && (
             <Step3
               formData={formData}
               handleSubmit={handleSubmit}
               onChange={handleInputChange}
             />
-          ) : null}
+          )}
 
           {active && (
             <DisplayForm
