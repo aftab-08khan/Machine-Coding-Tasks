@@ -4,6 +4,7 @@ import { PagesData } from "./data/PagesData";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import ReactQs from "./pages/ReactQs";
+import JSCompiler from "./pages/JSCompiler";
 
 const App = () => {
   const updatedData = PagesData.map((obj) => {
@@ -16,9 +17,12 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
+        <Navbar />
+
         <Routes>
           <Route element={<Home data={updatedData} />} index />
           <Route element={<ReactQs />} path="react-qs" />
+          <Route element={<JSCompiler />} path="js-compiler" />
 
           {updatedData?.map((item) => {
             return (
