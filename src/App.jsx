@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import ReactQs from "./pages/ReactQs";
 import JSCompiler from "./pages/JSCompiler";
+import PageNotFound from "./pages/PagesNotFound";
 
 const App = () => {
   const updatedData = PagesData.map((obj) => {
@@ -23,6 +24,7 @@ const App = () => {
           <Route element={<Home data={updatedData} />} index />
           <Route element={<ReactQs />} path="react-qs" />
           <Route element={<JSCompiler />} path="js-compiler" />
+          <Route element={<PageNotFound />} path="*" />
 
           {updatedData?.map((item) => {
             return (

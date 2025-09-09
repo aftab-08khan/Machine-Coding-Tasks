@@ -81,7 +81,7 @@ const Home = ({ data }) => {
           <div className="max-w-6xl mx-auto py-12 px-4 relative z-10">
             {/* Header Section */}
             <div className="text-center mb-12">
-              <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500 mb-4">
+              <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500 pb-4">
                 Machine Coding Tasks Dashboard
               </h1>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">

@@ -17,6 +17,7 @@ import ToggleAccordion from "../pages/ToggleAccordion";
 import SearchWithDebounce from "../pages/SearchWithDebounce";
 import CopyToClipboard from "../pages/CopyToClipboard";
 import ScrollToTop from "../pages/ScrollToTop";
+import PaginationTable from "../pages/PaginationTable";
 export const PagesData = [
   {
     link: "/loginFormWithValidation",
@@ -161,5 +162,12 @@ export const PagesData = [
     difficulty: "easy",
     description:
       "Create a button that smoothly scrolls the page back to the top.",
+  },
+  {
+    link: "/paginationTable",
+    screen: <PaginationTable />,
+    name: "Build a Pagination Table ",
+    difficulty: "hard",
+    description: "Create a Pagination Table.",
   },
 ];

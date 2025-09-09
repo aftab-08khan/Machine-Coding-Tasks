@@ -47,12 +47,12 @@ const SearchWithDebounce = () => {
         <BackButton>Back</BackButton>
         <TaskOverview>Real-time search with debouncing</TaskOverview>
         <Heading>Real-time search with debouncing</Heading>
-        <div className="max-w-4xl w-full  bg-white shadow-lg rounded-lg p-6">
+        <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg p-6">
           <form>
             <input
               onChange={(e) => handleInputChange(e.target.value)}
               value={inputValue}
-              className="w-full p-2 border-2 border-indigo-400 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full p-2 text-black border-2 border-indigo-400 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder="Filter Search with Debounce"
               type="text"
             />
