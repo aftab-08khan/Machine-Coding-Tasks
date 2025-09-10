@@ -35,10 +35,14 @@ const PaginationTable = () => {
     <ContentWrapper>
       <BackButton />
       <TaskOverview>
-        In this task, you'll implement Create a Pagination Table.
+        In this task, you'll implement a **Pagination Table** with a search
+        filter input. Users can search items by title, and results will be
+        displayed in a paginated table.
       </TaskOverview>
       <div className="max-w-4xl w-full bg-gray-900/70 backdrop-blur-md border border-gray-700 shadow-lg rounded-xl p-6">
-        <Title className="text-white">Search Filter Input</Title>
+        <Title className="text-white">
+          **Pagination Table** with a search filter input
+        </Title>
 
         <form className="flex gap-2 mb-6" action="#">
           <input

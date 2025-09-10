@@ -18,6 +18,7 @@ import SearchWithDebounce from "../pages/SearchWithDebounce";
 import CopyToClipboard from "../pages/CopyToClipboard";
 import ScrollToTop from "../pages/ScrollToTop";
 import PaginationTable from "../pages/PaginationTable";
+import AutoCompleteInputWithAPI from "../pages/AutoCompleteInputWithAPI";
 export const PagesData = [
   {
     link: "/loginFormWithValidation",
@@ -168,6 +169,15 @@ export const PagesData = [
     screen: <PaginationTable />,
     name: "Build a Pagination Table ",
     difficulty: "hard",
-    description: "Create a Pagination Table.",
+    description:
+      "**Pagination Table** with a search filter input. Users can search items by title",
+  },
+  {
+    link: "/autoCompleteInputWithAPI",
+    screen: <AutoCompleteInputWithAPI />,
+    name: " autocomplete input with API",
+    difficulty: "hard",
+    description:
+      " Implement an autocomplete input field that fetches suggestions from an API",
   },
 ];
