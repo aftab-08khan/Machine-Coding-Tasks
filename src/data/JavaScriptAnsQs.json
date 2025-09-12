@@ -1,0 +1,481 @@
+{
+  "Easy": [
+    {
+      "id": 1,
+      "question": "Write a function to reverse a string.",
+      "answer": "function reverseString(str) { return str.split('').reverse().join(''); }"
+    },
+    {
+      "id": 2,
+      "question": "Write a function to find the largest number in an array.",
+      "answer": "function largestNumber(arr) { return Math.max(...arr); }"
+    },
+    {
+      "id": 3,
+      "question": "Write a program to remove duplicate values from an array.",
+      "answer": "function removeDuplicates(arr) { return [...new Set(arr)]; }"
+    },
+    {
+      "id": 4,
+      "question": "Write a function to check if a string is a palindrome.",
+      "answer": "function isPalindrome(str) { return str === str.split('').reverse().join(''); }"
+    },
+    {
+      "id": 5,
+      "question": "Write a program to find the factorial of a given number.",
+      "answer": "function factorial(n) { return n <= 1 ? 1 : n * factorial(n - 1); }"
+    },
+    {
+      "id": 6,
+      "question": "Write a function to generate Fibonacci series up to n terms.",
+      "answer": "function fibonacci(n) { let a=0, b=1, result=[a]; while(result.length<n){ [a,b]=[b,a+b]; result.push(a); } return result; }"
+    },
+    {
+      "id": 7,
+      "question": "Sum of all numbers in an array.",
+      "answer": "function sumArray(arr) { return arr.reduce((acc, val) => acc+val, 0); }"
+    },
+    {
+      "id": 8,
+      "question": "Find the second largest number in an array.",
+      "answer": "function secondLargest(arr) { let unique = [...new Set(arr)].sort((a,b)=>b-a); return unique[1]; }"
+    },
+    {
+      "id": 9,
+      "question": "Write a function to check if a number is prime.",
+      "answer": "function isPrime(n) { if(n<=1) return false; for(let i=2;i<=Math.sqrt(n);i++){ if(n%i===0) return false; } return true; }"
+    },
+    {
+      "id": 10,
+      "question": "Write a function to calculate the power of a number (x^n).",
+      "answer": "function power(x,n) { return x**n; }"
+    },
+    {
+      "id": 11,
+      "question": "Write a function to find the smallest number in an array.",
+      "answer": "function smallestNumber(arr) { return Math.min(...arr); }"
+    },
+    {
+      "id": 12,
+      "question": "Write a function to count the number of words in a string.",
+      "answer": "function countWords(str) { return str.trim().split(/\\s+/).length; }"
+    },
+    {
+      "id": 13,
+      "question": "Write a function to check if a given year is a leap year.",
+      "answer": "function isLeapYear(year) { return (year%4===0 && year%100!==0)||year%400===0; }"
+    },
+    {
+      "id": 14,
+      "question": "Write a function to remove vowels from a string.",
+      "answer": "function removeVowels(str) { return str.replace(/[aeiouAEIOU]/g,''); }"
+    },
+    {
+      "id": 15,
+      "question": "Write a function to check if a string contains only digits.",
+      "answer": "function isDigitsOnly(str) { return /^\\d+$/.test(str); }"
+    },
+    {
+      "id": 16,
+      "question": "Write a function to find the sum of digits of a number.",
+      "answer": "function sumDigits(n) { return n.toString().split('').reduce((a,b)=>a+Number(b),0); }"
+    },
+    {
+      "id": 17,
+      "question": "Write a function to check if all elements in an array are unique.",
+      "answer": "function allUnique(arr) { return new Set(arr).size === arr.length; }"
+    },
+    {
+      "id": 18,
+      "question": "Write a function to count the frequency of characters in a string.",
+      "answer": "function charFrequency(str) { return [...str].reduce((acc,c)=>{ acc[c]=(acc[c]||0)+1; return acc; }, {}); }"
+    },
+    {
+      "id": 19,
+      "question": "Write a function to find the unique characters in a string.",
+      "answer": "function uniqueChars(str) { return [...new Set(str)].join(''); }"
+    },
+    {
+      "id": 20,
+      "question": "Write a function to check if a number is an Armstrong number.",
+      "answer": "function isArmstrong(n){ let len = n.toString().length; return n.toString().split('').reduce((acc,d)=>acc+Math.pow(Number(d),len),0)===n; }"
+    },
+    {
+      "id": 21,
+      "question": "Write a function to find the longest word in a string.",
+      "answer": "function longestWord(str){ return str.split(/\\s+/).reduce((longest,word)=>word.length>longest.length?word:longest,''); }"
+    },
+    {
+      "id": 22,
+      "question": "Write a function to implement a basic calculator (add, subtract, multiply, divide).",
+      "answer": "function calculator(a,b,op){ if(op==='add') return a+b; if(op==='subtract') return a-b; if(op==='multiply') return a*b; if(op==='divide') return a/b; return null; }"
+    }
+  ],
+  "Medium": [
+    {
+      "id": 23,
+      "question": "Write a function to flatten a nested array.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 24,
+      "question": "Write a function to check for anagrams between two strings.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 25,
+      "question": "Write a program to find the missing number in an array.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 26,
+      "question": "Write a function to sort an array without using sort().",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 27,
+      "question": "Rotate an array to the right by k steps.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 28,
+      "question": "Count occurrences of each element in an array.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 29,
+      "question": "Merge two sorted arrays into a single sorted array.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 30,
+      "question": "Move all zeroes to the end of an array.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 31,
+      "question": "Find the intersection of two arrays.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 32,
+      "question": "Find the union of two arrays.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 33,
+      "question": "Write a function to convert a number to a string in binary format.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 34,
+      "question": "Write a function to remove all falsy values from an array.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 35,
+      "question": "Implement a function that converts a string to title case.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 36,
+      "question": "Write a program to reverse the words in a string (not the letters).",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 37,
+      "question": "Write a function to generate a random number between a given range.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 38,
+      "question": "Write a program to find the GCD (Greatest Common Divisor) of two numbers.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 39,
+      "question": "Find the intersection of two strings (characters that appear in both strings).",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 40,
+      "question": "Write a function to check if a string has balanced parentheses.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 41,
+      "question": "Write a program to check if two arrays are equal (have the same elements in the same order).",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 42,
+      "question": "Write a function to find the sum of all odd numbers in an array.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 43,
+      "question": "Write a program to find the median of an array.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 44,
+      "question": "Create a function to find the mode (most frequent element) of an array.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 45,
+      "question": "Write a program to shuffle the elements of an array randomly.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 46,
+      "question": "Implement a function to group an array of strings by their first letter.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 47,
+      "question": "Write a function to find the longest common prefix among an array of strings.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 48,
+      "question": "Write a program to count the number of unique elements in an array.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 49,
+      "question": "Write a function to check if a given string is a valid email address.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 50,
+      "question": "Write a program to convert a string from snake_case to camelCase.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 52,
+      "question": "Write a function to calculate the LCM (Least Common Multiple) of two numbers.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 53,
+      "question": "Implement a function to split an array into chunks of a given size.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 54,
+      "question": "Write a function to merge two objects (e.g., merging their properties).",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 55,
+      "question": "Write a function to check if an object has a specific property.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 56,
+      "question": "Write a function to find all keys in an object.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 57,
+      "question": "Write a function to find all values in an object.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 58,
+      "question": "Write a function to count the number of properties in an object.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 59,
+      "question": "Write a function to remove a specific property from an object.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 60,
+      "question": "Write a function to check if an object is empty (no properties).",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 61,
+      "question": "Write a function to get the object keys and their corresponding values.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 62,
+      "question": "Write a function to update the value of a specific property in an object.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 63,
+      "question": "Write a function to check if an object contains nested objects.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 64,
+      "question": "Write a function to flatten a deeply nested object.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 65,
+      "question": "Write a function to compare two objects (check if they have the same keys and values).",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 66,
+      "question": "Write a function to find the sum of all numeric values in an object.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 67,
+      "question": "Write a function to extract all string values from an object.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 68,
+      "question": "Write a function to merge two arrays into a single object (e.g., first array as keys, second array as values).",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 69,
+      "question": "Write a function to convert an object into an array of key-value pairs.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 70,
+      "question": "Write a function to convert an object into a query string (e.g., { name: \"John\", age: 30 } → \"name=John&age=30\").",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 71,
+      "question": "Write a function to deep merge two objects (nested properties should be merged, not replaced).",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 72,
+      "question": "Write a function to check if two objects are the same (by comparing keys and values).",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 73,
+      "question": "Write a function to find the common keys between two objects.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 74,
+      "question": "Write a function to create a new object with only selected keys from the original object.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 75,
+      "question": "Write a function to create an object from an array of keys and values.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 76,
+      "question": "Write a function to update the values of multiple keys in an object.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 77,
+      "question": "Write a function to remove falsy values from an object (remove null, undefined, false, etc.).",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 78,
+      "question": "Write a function to find if two objects have identical structure (same keys, values, and types).",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 79,
+      "question": "Write a function to count the number of occurrences of each key in an array of objects.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 80,
+      "question": "Write a function to get the average of numeric values in an object.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 81,
+      "question": "Write a function to find the maximum value of a specific property in an array of objects.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 82,
+      "question": "let input = [1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 5, 555, 555]; output=[1,1,2,2,3,3,4,5]",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 83,
+      "question": "Implement a program to convert a Roman numeral to an integer.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 84,
+      "question": "Write a function to validate if a given string is a valid JSON.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 85,
+      "question": "Write a function to implement a deep cloning of an object.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 86,
+      "question": "Write a function to implement a function that performs deep equality checking between two objects.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 87,
+      "question": "Write a function to implement a function that flattens a deeply nested object.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 88,
+      "question": "Write a function to implement a function that finds the longest common subsequence between two strings.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 89,
+      "question": "Write a function to implement a function that finds the shortest path in a graph (e.g., Dijkstra's algorithm).",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 90,
+      "question": "Write a function to implement a function that solves the Tower of Hanoi problem.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 91,
+      "question": "Write a function to implement a function that generates all permutations of a string.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 92,
+      "question": "Write a function to implement a function that solves the N-Queens problem.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 93,
+      "question": "Write a function to implement a function that finds the longest increasing subsequence in an array.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 94,
+      "question": "Write a function to implement a function that solves the Knapsack problem.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 95,
+      "question": "Write a function to implement a function that finds the shortest common supersequence between two strings.",
+      "answer": "Not Solved Yet"
+    },
+    {
+      "id": 96,
+      "question": "Write a function to implement a function that solves the Traveling Salesman Problem (TSP).",
+      "answer": "Not Solved Yet"
+    }
+  ]
+}

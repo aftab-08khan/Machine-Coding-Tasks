@@ -120,7 +120,7 @@ const Home = ({ data }) => {
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-2 w-full md:w-auto">
+              <div className="flex flex-wrap gap-2 justify-end  md:w-1/2 w-full ">
                 <button
                   onClick={() => setDifficultyFilter("all")}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
@@ -173,7 +173,7 @@ const Home = ({ data }) => {
 
             {/* Loading State */}
             {isLoading ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 max-w-4xl lg:grid-cols-3 gap-6">
                 {[...Array(6)].map((_, i) => (
                   <div
                     key={i}
@@ -183,7 +183,6 @@ const Home = ({ data }) => {
               </div>
             ) : (
               <>
-                {/* Challenges Grid */}
                 {filteredData && filteredData.length > 0 ? (
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredData.map((page) => (
