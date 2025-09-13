@@ -19,6 +19,7 @@ import CopyToClipboard from "../pages/CopyToClipboard";
 import ScrollToTop from "../pages/ScrollToTop";
 import PaginationTable from "../pages/PaginationTable";
 import AutoCompleteInputWithAPI from "../pages/AutoCompleteInputWithAPI";
+import ShoppingCart from "../pages/ShoppingCart";
 export const PagesData = [
   {
     link: "/loginFormWithValidation",
@@ -179,5 +180,12 @@ export const PagesData = [
     difficulty: "hard",
     description:
       " Implement an autocomplete input field that fetches suggestions from an API",
+  },
+  {
+    link: "/shoppingCart",
+    screen: <ShoppingCart />,
+    name: "Build a shopping cart with add/remove",
+    difficulty: "medium",
+    description: "Build a shopping cart with add/remove",
   },
 ];

@@ -78,7 +78,7 @@ const Home = ({ data }) => {
 
         {/* Main content */}
         <ContentWrapper>
-          <div className="max-w-6xl mx-auto py-12 px-4 relative z-10">
+          <div className="w-full mx-auto p-12 relative z-10">
             {/* Header Section */}
             <div className="text-center mb-12">
               <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500 pb-4">
@@ -91,7 +91,7 @@ const Home = ({ data }) => {
             </div>
 
             {/* Search and Filter Section */}
-            <div className="flex flex-col md:flex-row gap-4 justify-between items-center mb-8 p-4 bg-black/30 rounded-xl border border-white/10">
+            <div className="flex flex-col md:flex-row w-ul gap-4 justify-between items-center mb-8 p-4 bg-black/30 rounded-xl border border-white/10">
               <div className="w-full md:w-1/2">
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -173,7 +173,7 @@ const Home = ({ data }) => {
 
             {/* Loading State */}
             {isLoading ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 max-w-4xl lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 max-w-4xl lg:grid-cols-3 gap-6 w-full">
                 {[...Array(6)].map((_, i) => (
                   <div
                     key={i}
