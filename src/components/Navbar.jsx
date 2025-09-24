@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BsGithub } from "react-icons/bs";
+import { FaGlobe } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
@@ -23,21 +24,8 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                />
-              </svg>
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center text-center justify-center">
+              <FaGlobe className="text-white text-lg text-center" />
             </div>
             <span className="text-xl font-bold text-white group-hover:text-gray-300 transition-colors">
               CodeDashboard

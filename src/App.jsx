@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import { PagesData } from "./data/PagesData";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
 import ReactQs from "./pages/ReactQs";
 import JSCompiler from "./pages/JSCompiler";
 import PageNotFound from "./pages/PagesNotFound";
@@ -19,7 +21,6 @@ const App = () => {
     <>
       <BrowserRouter>
         <Navbar />
-
         <Routes>
           <Route element={<Home data={updatedData} />} index />
           <Route element={<ReactQs />} path="react-qs" />
@@ -34,6 +35,7 @@ const App = () => {
             );
           })}
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

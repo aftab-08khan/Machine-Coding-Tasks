@@ -20,6 +20,8 @@ import ScrollToTop from "../pages/ScrollToTop";
 import PaginationTable from "../pages/PaginationTable";
 import AutoCompleteInputWithAPI from "../pages/AutoCompleteInputWithAPI";
 import ShoppingCart from "../pages/ShoppingCart";
+import FileUploadWithPreview from "../pages/FileUploadWithPreview";
+import ImageGalleryWithModal from "../pages/ImageGalleryWithModal";
 export const PagesData = [
   {
     link: "/loginFormWithValidation",
@@ -187,5 +189,21 @@ export const PagesData = [
     name: "Build a shopping cart with add/remove",
     difficulty: "medium",
     description: "Build a shopping cart with add/remove",
+  },
+  {
+    link: "/filePreview",
+    screen: <FileUploadWithPreview />,
+    name: "File Upload with Preview",
+    difficulty: "medium",
+    description:
+      "Build a modern file uploader with drag & drop support and live previews.",
+  },
+  {
+    link: "/imagePreviewWithModel",
+    screen: <ImageGalleryWithModal />,
+    name: "Image Gallery with Modal Preview",
+    difficulty: "medium",
+    description:
+      "Build a modern file uploader with drag & drop support and live previews.",
   },
 ];
