@@ -22,6 +22,8 @@ import AutoCompleteInputWithAPI from "../pages/AutoCompleteInputWithAPI";
 import ShoppingCart from "../pages/ShoppingCart";
 import FileUploadWithPreview from "../pages/FileUploadWithPreview";
 import ImageGalleryWithModal from "../pages/ImageGalleryWithModal";
+import TagInput from "../pages/TagInput";
+import DynamicForm from "../pages/DynamicForm";
 export const PagesData = [
   {
     link: "/loginFormWithValidation",
@@ -204,6 +206,22 @@ export const PagesData = [
     name: "Image Gallery with Modal Preview",
     difficulty: "medium",
     description:
-      "Build a modern file uploader with drag & drop support and live previews.",
+      "This task demonstrates an interactive image gallery where users can preview images in a modal.",
+  },
+  {
+    link: "/tagInput",
+    screen: <TagInput />,
+    name: "Tag input component",
+    difficulty: "easy",
+    description:
+      "This task demonstrates an input Field and rendering tag based upon the input",
+  },
+  {
+    link: "/dynamicForm",
+    screen: <DynamicForm />,
+    name: "Dynamic form with conditional fields",
+    difficulty: "hard",
+    description:
+      "This task demonstrates an Dynamic form with conditional fields",
   },
 ];

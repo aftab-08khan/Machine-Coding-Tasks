@@ -5,6 +5,7 @@ import TaskOverview from "../components/TaskOverview";
 import Wrapper from "../components/Wrapper";
 import { GalleryImages } from "../data/CustomData";
 import CustomModal from "../components/CustomModal";
+import Heading from "../components/Heading";
 
 const ImageGalleryWithModal = () => {
   const [imgSrc, setImgSrc] = useState("");
@@ -17,8 +18,13 @@ const ImageGalleryWithModal = () => {
   return (
     <ContentWrapper>
       <BackButton />
-      <TaskOverview></TaskOverview>
+      <TaskOverview>
+        This task demonstrates an interactive image gallery where users can
+        preview images in a modal. Click on any image to view it in full screen.
+        The gallery is responsive and adapts to different screen sizes.
+      </TaskOverview>
       <Wrapper>
+        <Heading>Image Gallery with Modal Preview</Heading>
         <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {GalleryImages.length > 0 &&
             GalleryImages.map((image) => {
