@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav
       className={`sticky top-0 z-50 transition-all duration-300
-          bg-neutral-900/90 backdrop-blur-md shadow-xl py-4
+          bg-neutral-900/90 backdrop-blur-md shadow-xl py-3
        border-b border-white/10`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

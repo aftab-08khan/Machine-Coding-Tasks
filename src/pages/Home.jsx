@@ -78,7 +78,7 @@ const Home = ({ data }) => {
 
         {/* Main content */}
         <ContentWrapper>
-          <div className="w-full mx-auto p-12 relative z-10">
+          <div className="w-full mx-auto p-6 md:p-10 relative z-10">
             {/* Header Section */}
             <div className="text-center mb-12">
               <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500 pb-4">
