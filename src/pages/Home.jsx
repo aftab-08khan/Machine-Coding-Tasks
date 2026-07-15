@@ -17,7 +17,6 @@ const Home = ({ data }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Filter data based on search term and difficulty
   useEffect(() => {
     if (data) {
       let filtered = data.filter((page) => {
@@ -32,15 +31,13 @@ const Home = ({ data }) => {
     }
   }, [searchTerm, difficultyFilter, data]);
 
-  // Count tasks by difficulty
   const countByDifficulty = {
     all: data?.length || 0,
-    easy: data?.filter((page) => page.difficulty === "easy").length || 0,
-    medium: data?.filter((page) => page.difficulty === "medium").length || 0,
-    hard: data?.filter((page) => page.difficulty === "hard").length || 0,
+    easy: data?.filter((page) => page.difficulty.toLowerCase() === "easy").length || 0,
+    medium: data?.filter((page) => page.difficulty.toLowerCase() === "medium").length || 0,
+    hard: data?.filter((page) => page.difficulty.toLowerCase() === "hard").length || 0,
   };
 
-  // Get difficulty badge color
   const getDifficultyColor = (difficulty) => {
     switch (difficulty) {
       case "easy":
@@ -54,7 +51,6 @@ const Home = ({ data }) => {
     }
   };
 
-  // Format difficulty text
   const formatDifficulty = (difficulty) => {
     return difficulty.charAt(0).toUpperCase() + difficulty.slice(1);
   };
@@ -76,10 +72,8 @@ const Home = ({ data }) => {
           />
         </div>
 
-        {/* Main content */}
         <ContentWrapper>
           <div className="w-full mx-auto p-6 md:p-10 relative z-10">
-            {/* Header Section */}
             <div className="text-center mb-12">
               <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500 pb-4">
                 Machine Coding Tasks Dashboard
@@ -90,7 +84,6 @@ const Home = ({ data }) => {
               </p>
             </div>
 
-            {/* Search and Filter Section */}
             <div className="flex flex-col md:flex-row w-ul gap-4 justify-between items-center mb-8 p-4 bg-black/30 rounded-xl border border-white/10">
               <div className="w-full md:w-1/2">
                 <div className="relative">
@@ -202,7 +195,7 @@ const Home = ({ data }) => {
                           <div className="flex items-center justify-between mb-4">
                             <span
                               className={`text-xs font-medium px-2 py-1 rounded-full ${getDifficultyColor(
-                                page.difficulty
+                                page.difficulty.toLowerCase()
                               )}`}
                             >
                               {formatDifficulty(page.difficulty)}
