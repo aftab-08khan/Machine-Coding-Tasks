@@ -24,6 +24,7 @@ import FileUploadWithPreview from "../pages/FileUploadWithPreview";
 import ImageGalleryWithModal from "../pages/ImageGalleryWithModal";
 import TagInput from "../pages/TagInput";
 import DynamicForm from "../pages/DynamicForm";
+import WordOmitter from "../pages/WordOmitter";
 export const PagesData = [
   {
     link: "/loginFormWithValidation",
@@ -224,4 +225,12 @@ export const PagesData = [
     description:
       "This task demonstrates an Dynamic form with conditional fields",
   },
+{
+  link: "/wordOmitter",
+  screen: <WordOmitter />,
+  name: "Dynamic Word Omitter",
+  difficulty: "Easy",
+  description:
+    "Remove a specific word from a sentence dynamically using JavaScript string manipulation and array methods."
+},
 ];
