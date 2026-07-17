@@ -24,132 +24,163 @@ const DynamicForm = () => {
   };
 
   return (
-    <ContentWrapper>
+    <ContentWrapper className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-200">
       <BackButton />
       <TaskOverview>Dynamic form with conditional fields</TaskOverview>
 
       <Wrapper>
-        <Heading>Dynamic form with conditional fields</Heading>
+        <div className="max-w-xl mx-auto mt-4">
+          <Heading className="text-2xl font-black tracking-tight text-slate-900 dark:text-white">
+            Dynamic Configuration Form
+          </Heading>
+          <p className="text-xs font-mono text-slate-400 dark:text-slate-500 uppercase tracking-wider mt-1">
+            Conditional Rendering Module
+          </p>
 
-        {/* Role Selection */}
-        <div className="flex gap-6 mt-4 mb-6">
-          <label className="flex items-center gap-2 cursor-pointer text-gray-700 dark:text-gray-200">
-            <input
-              type="radio"
-              name="role"
-              value="student"
-              checked={role === "student"}
-              onChange={(e) => setRole(e.target.value)}
-              className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300"
-            />
-            Student
-          </label>
-          <label className="flex items-center gap-2 cursor-pointer text-gray-700 dark:text-gray-200">
-            <input
-              type="radio"
-              name="role"
-              value="teacher"
-              checked={role === "teacher"}
-              onChange={(e) => setRole(e.target.value)}
-              className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300"
-            />
-            Teacher
-          </label>
+          {/* 🎭 Visual Segmented Role Selector */}
+          <div className="grid grid-cols-2 gap-3 mt-6 mb-8 bg-slate-100 dark:bg-slate-900/60 p-1.5 rounded-xl border border-slate-200/60 dark:border-slate-800/60">
+            {/* Student Segment Option */}
+            <label
+              className={`flex items-center justify-center gap-2 py-3 px-4 rounded-lg font-sans text-sm font-bold tracking-wide transition-all cursor-pointer select-none border ${
+                role === "student"
+                  ? "bg-indigo-600 text-white border-indigo-600 shadow-md shadow-indigo-600/10"
+                  : "bg-transparent text-slate-600 dark:text-slate-400 border-transparent hover:bg-slate-200/50 dark:hover:bg-slate-800/50"
+              }`}
+            >
+              <input
+                type="radio"
+                name="role"
+                value="student"
+                checked={role === "student"}
+                onChange={(e) => setRole(e.target.value)}
+                className="sr-only" // Hidden visually, but perfectly accessible to screen readers
+              />
+              🎓 Student Member
+            </label>
+
+            {/* Teacher Segment Option */}
+            <label
+              className={`flex items-center justify-center gap-2 py-3 px-4 rounded-lg font-sans text-sm font-bold tracking-wide transition-all cursor-pointer select-none border ${
+                role === "teacher"
+                  ? "bg-indigo-600 text-white border-indigo-600 shadow-md shadow-indigo-600/10"
+                  : "bg-transparent text-slate-600 dark:text-slate-400 border-transparent hover:bg-slate-200/50 dark:hover:bg-slate-800/50"
+              }`}
+            >
+              <input
+                type="radio"
+                name="role"
+                value="teacher"
+                checked={role === "teacher"}
+                onChange={(e) => setRole(e.target.value)}
+                className="sr-only"
+              />
+              💼 Faculty Instructor
+            </label>
+          </div>
+
+          {/* 📋 Dynamic Conditional Fields Form Workspace */}
+          <form className="space-y-5 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 p-6 rounded-2xl shadow-xl shadow-slate-100 dark:shadow-black/20 transition-all duration-300">
+            {role === "student" ? (
+              <div className="space-y-5 animate-fade-in">
+                {/* Name Input */}
+                <div>
+                  <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
+                    Full Name
+                  </label>
+                  <input
+                    onChange={handleInputChange}
+                    name="name"
+                    type="text"
+                    value={formData.name}
+                    placeholder="Enter your full name"
+                    required
+                    className="w-full px-4 py-2.5 border border-slate-200 dark:border-slate-800 rounded-xl bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-600 focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 focus:bg-white dark:focus:bg-slate-950 outline-none transition-all shadow-inner"
+                  />
+                </div>
+
+                {/* Roll Number Input */}
+                <div>
+                  <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
+                    Roll Number
+                  </label>
+                  <input
+                    onChange={handleInputChange}
+                    name="rollNo"
+                    type="text"
+                    value={formData.rollNo}
+                    placeholder="Enter your Roll No"
+                    required
+                    className="w-full px-4 py-2.5 border border-slate-200 dark:border-slate-800 rounded-xl bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-600 focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 focus:bg-white dark:focus:bg-slate-950 outline-none transition-all shadow-inner"
+                  />
+                </div>
+
+                {/* Class Input */}
+                <div>
+                  <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
+                    Assigned Class
+                  </label>
+                  <input
+                    onChange={handleInputChange}
+                    name="class"
+                    type="text"
+                    value={formData.class}
+                    placeholder="Enter your Class"
+                    required
+                    className="w-full px-4 py-2.5 border border-slate-200 dark:border-slate-800 rounded-xl bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-600 focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 focus:bg-white dark:focus:bg-slate-950 outline-none transition-all shadow-inner"
+                  />
+                </div>
+              </div>
+            ) : role === "teacher" ? (
+              <div className="space-y-5 animate-fade-in">
+                {/* Subject Selection Menu */}
+                <div>
+                  <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
+                    Department Subject
+                  </label>
+                  <select
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-2.5 border border-slate-200 dark:border-slate-800 rounded-xl bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 focus:bg-white dark:focus:bg-slate-950 outline-none transition-all shadow-inner font-medium cursor-pointer"
+                  >
+                    <option value="">Select core subject</option>
+                    <option value="English">English Language</option>
+                    <option value="Hindi">Hindi Lit</option>
+                    <option value="Urdu">Urdu Core</option>
+                  </select>
+                </div>
+
+                {/* Lecture Time Input */}
+                <div>
+                  <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
+                    Scheduled Lecture Time
+                  </label>
+                  <input
+                    onChange={handleInputChange}
+                    name="lectureTime"
+                    type="time"
+                    value={formData.lectureTime}
+                    required
+                    className="w-full px-4 py-2.5 border border-slate-200 dark:border-slate-800 rounded-xl bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 focus:bg-white dark:focus:bg-slate-950 outline-none transition-all shadow-inner font-mono font-bold"
+                  />
+                </div>
+              </div>
+            ) : (
+              /* Empty Standby Notification Wrapper Box */
+              <div className="py-8 text-center flex flex-col items-center justify-center text-slate-400 dark:text-slate-500">
+                <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-950 flex items-center justify-center border border-slate-200 dark:border-slate-800 text-lg mb-2">
+                  ⚡
+                </div>
+                <p className="text-sm font-medium text-slate-600 dark:text-slate-400">
+                  No Active Profile Selected
+                </p>
+                <p className="text-xs max-w-xs mt-1">
+                  Choose a user categorization layer from the selector grid above to initiate conditional form data fields.
+                </p>
+              </div>
+            )}
+          </form>
         </div>
-
-        {/* Form Fields */}
-        <form className="space-y-5">
-          {role === "student" ? (
-            <>
-              {/* Name */}
-              <div>
-                <label className="block text-gray-700 dark:text-gray-200 font-medium mb-1">
-                  Name
-                </label>
-                <input
-                  onChange={handleInputChange}
-                  name="name"
-                  type="text"
-                  value={formData.name}
-                  placeholder="Enter your full name"
-                  required
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:outline-none shadow-sm"
-                />
-              </div>
-
-              {/* Roll No */}
-              <div>
-                <label className="block text-gray-700 dark:text-gray-200 font-medium mb-1">
-                  Roll No
-                </label>
-                <input
-                  onChange={handleInputChange}
-                  name="rollNo"
-                  type="text"
-                  value={formData.rollNo}
-                  placeholder="Enter your Roll No"
-                  required
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:outline-none shadow-sm"
-                />
-              </div>
-
-              {/* Class */}
-              <div>
-                <label className="block text-gray-700 dark:text-gray-200 font-medium mb-1">
-                  Class
-                </label>
-                <input
-                  onChange={handleInputChange}
-                  name="class"
-                  type="text"
-                  value={formData.class}
-                  placeholder="Enter your Class"
-                  required
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:outline-none shadow-sm"
-                />
-              </div>
-            </>
-          ) : role === "teacher" ? (
-            <>
-              {/* Subject */}
-              <div>
-                <label className="block text-gray-700 dark:text-gray-200 font-medium mb-1">
-                  Subject
-                </label>
-                <select
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:outline-none shadow-sm"
-                >
-                  <option value="">Select subject</option>
-                  <option value="English">English</option>
-                  <option value="Hindi">Hindi</option>
-                  <option value="Urdu">Urdu</option>
-                </select>
-              </div>
-
-              {/* Lecture Time */}
-              <div>
-                <label className="block text-gray-700 dark:text-gray-200 font-medium mb-1">
-                  Lecture Time
-                </label>
-                <input
-                  onChange={handleInputChange}
-                  name="lectureTime"
-                  type="time"
-                  value={formData.lectureTime}
-                  required
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:outline-none shadow-sm"
-                />
-              </div>
-            </>
-          ) : (
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              Please select a role above to continue.
-            </p>
-          )}
-        </form>
       </Wrapper>
     </ContentWrapper>
   );

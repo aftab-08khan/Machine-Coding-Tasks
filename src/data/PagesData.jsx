@@ -25,6 +25,7 @@ import ImageGalleryWithModal from "../pages/ImageGalleryWithModal";
 import TagInput from "../pages/TagInput";
 import DynamicForm from "../pages/DynamicForm";
 import WordOmitter from "../pages/WordOmitter";
+import PasswordGenerator from "../pages/PasswordGenerator";
 export const PagesData = [
   {
     link: "/loginFormWithValidation",
@@ -225,12 +226,20 @@ export const PagesData = [
     description:
       "This task demonstrates an Dynamic form with conditional fields",
   },
-{
-  link: "/wordOmitter",
-  screen: <WordOmitter />,
-  name: "Dynamic Word Omitter",
-  difficulty: "Easy",
-  description:
-    "Remove a specific word from a sentence dynamically using JavaScript string manipulation and array methods."
-},
+  {
+    link: "/wordOmitter",
+    screen: <WordOmitter />,
+    name: "Dynamic Word Omitter",
+    difficulty: "Easy",
+    description:
+      "Remove a specific word from a sentence dynamically using JavaScript string manipulation and array methods.",
+  },
+  {
+    link: "/passwordGenerator",
+    screen: <PasswordGenerator />,
+    name: "Password Generator",
+    difficulty: "Medium",
+    description:
+      "Build a secure password generator that creates random passwords based on user-selected options such as password length, uppercase letters,lowercase letters, and special characters.",
+  },
 ];

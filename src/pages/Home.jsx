@@ -58,7 +58,6 @@ const Home = ({ data }) => {
   return (
     <>
       <div className="relative min-h-screen text-white overflow-hidden bg-gradient-to-br from-gray-900 to-black">
-        {/* Enhanced Particles Background */}
         <div className="absolute inset-0 z-0 opacity-40">
           <Particles
             particleColors={["#6366f1", "#8b5cf6", "#ec4899"]}
@@ -157,16 +156,14 @@ const Home = ({ data }) => {
               </div>
             </div>
 
-            {/* Results Count */}
             <div className="flex justify-between items-center mb-6">
               <p className="text-gray-400">
                 Showing {filteredData?.length} of {data?.length} challenges
               </p>
             </div>
 
-            {/* Loading State */}
             {isLoading ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 max-w-4xl lg:grid-cols-3 gap-6 w-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[...Array(6)].map((_, i) => (
                   <div
                     key={i}
@@ -188,7 +185,6 @@ const Home = ({ data }) => {
                                  hover:scale-[1.02] transition-all duration-300
                                  hover:border-indigo-500/30 relative overflow-hidden"
                       >
-                        {/* Subtle gradient accent */}
                         <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 rounded-full -translate-y-16 translate-x-16 group-hover:scale-110 transition-transform duration-500"></div>
 
                         <div className="relative z-10">
