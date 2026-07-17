@@ -10,11 +10,11 @@ const GridsLights = () => {
 
   const handleCard = (index) => {
     if (!arr.includes(index)) {
-      setArr((prev) => [...prev, index]); // Store clicked order
+      setArr((prev) => [...prev, index]); 
     }
 
     if (arr.length + 1 === 4) {
-      // Fix: Set `filled` correctly when the 4th box is clicked
+    
       setFilled(true);
     }
   };
@@ -28,7 +28,7 @@ const GridsLights = () => {
             setFilled(false);
             return [];
           }
-          return prev.slice(1); // Remove the first clicked box in order
+          return prev.slice(1); 
         });
       }, 1000);
 
