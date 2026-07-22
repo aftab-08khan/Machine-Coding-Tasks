@@ -26,6 +26,7 @@ import TagInput from "../pages/TagInput";
 import DynamicForm from "../pages/DynamicForm";
 import WordOmitter from "../pages/WordOmitter";
 import PasswordGenerator from "../pages/PasswordGenerator";
+import ColorPasswordMatcher from "../pages/ColorPasswordMatcher";
 export const PagesData = [
   {
     link: "/loginFormWithValidation",
@@ -241,5 +242,13 @@ export const PagesData = [
     difficulty: "Medium",
     description:
       "Build a secure password generator that creates random passwords based on user-selected options such as password length, uppercase letters,lowercase letters, and special characters.",
+  },
+    {
+    link: "/colorPasswordMatcher",
+    screen: <ColorPasswordMatcher />,
+    name: "Color Password Matcher",
+    difficulty: "Medium",
+    description:
+      "The Color Password Matcher is an interactive visual security component where users attempt to discover and match a secret 4-color passcode sequence.",
   },
 ];

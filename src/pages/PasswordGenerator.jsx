@@ -28,7 +28,7 @@ const PasswordGenerator = () => {
     length = 8,
     lower = true,
     upper = false,
-    special = false
+    special = false,
   ) {
     const lowerChr = "abcdefghijklmnopqrstuvwxyz";
     const upperChr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -74,8 +74,10 @@ const PasswordGenerator = () => {
       <BackButton />
 
       <TaskOverview>
-  Build a secure password generator that creates random passwords based on user-selected options such as password length, uppercase letters, lowercase letters, and special characters using the Web Crypto API.
-</TaskOverview>
+        Build a secure password generator that creates random passwords based on
+        user-selected options such as password length, uppercase letters,
+        lowercase letters, and special characters using the Web Crypto API.
+      </TaskOverview>
 
       <Wrapper>
         <div className="max-w-md mx-auto text-center mb-2">
@@ -117,7 +119,9 @@ const PasswordGenerator = () => {
                 onChange={handleChange}
                 className="w-4 h-4 rounded border-slate-700 bg-slate-950 text-blue-600 focus:ring-0 focus:ring-offset-0 accent-blue-500 cursor-pointer transition-all"
               />
-              <span className="group-hover:text-white transition-colors">Lowercase Letters</span>
+              <span className="group-hover:text-white transition-colors">
+                Lowercase Letters
+              </span>
             </label>
 
             <label className="flex items-center gap-3 text-sm text-slate-300 font-medium cursor-pointer group select-none">
@@ -128,7 +132,9 @@ const PasswordGenerator = () => {
                 onChange={handleChange}
                 className="w-4 h-4 rounded border-slate-700 bg-slate-950 text-blue-600 focus:ring-0 focus:ring-offset-0 accent-blue-500 cursor-pointer transition-all"
               />
-              <span className="group-hover:text-white transition-colors">Uppercase Letters</span>
+              <span className="group-hover:text-white transition-colors">
+                Uppercase Letters
+              </span>
             </label>
 
             <label className="flex items-center gap-3 text-sm text-slate-300 font-medium cursor-pointer group select-none">
@@ -139,7 +145,9 @@ const PasswordGenerator = () => {
                 onChange={handleChange}
                 className="w-4 h-4 rounded border-slate-700 bg-slate-950 text-blue-600 focus:ring-0 focus:ring-offset-0 accent-blue-500 cursor-pointer transition-all"
               />
-              <span className="group-hover:text-white transition-colors">Special Characters</span>
+              <span className="group-hover:text-white transition-colors">
+                Special Characters
+              </span>
             </label>
           </div>
 
@@ -152,7 +160,9 @@ const PasswordGenerator = () => {
         </form>
 
         <div className="max-w-md mx-auto mt-5 bg-slate-950 border border-slate-800 rounded-2xl p-4 flex items-center justify-between shadow-inner">
-          <span className={`font-mono text-sm break-all select-all ${result ? 'text-emerald-400 font-bold' : 'text-slate-600'}`}>
+          <span
+            className={`font-mono text-sm break-all select-all ${result ? "text-emerald-400 font-bold" : "text-slate-600"}`}
+          >
             {result || "Entropy string pending..."}
           </span>
 
