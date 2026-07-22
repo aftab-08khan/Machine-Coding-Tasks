@@ -52,9 +52,8 @@ const ToggleAccordion = () => {
         <ul className="flex flex-col w-full divide-y divide-gray-700 rounded-xl overflow-hidden shadow-md">
           {FAQData.map((item, i) => (
             <li key={i} className="list-none">
-              {/* Accordion Container */}
+              
               <div className="w-full">
-                {/* Header */}
                 <div
                   className="flex justify-between items-center bg-gray-700 px-4 py-3 cursor-pointer 
                        hover:bg-gray-600 transition-colors duration-200"
@@ -70,7 +69,6 @@ const ToggleAccordion = () => {
                   )}
                 </div>
 
-                {/* Body */}
                 {activeIndex === i && (
                   <div className="bg-gray-800 px-4 py-3">
                     <p className="text-sm text-gray-300">{item.description}</p>

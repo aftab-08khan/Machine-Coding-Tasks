@@ -37,7 +37,13 @@ const DynamicForm = () => {
             Conditional Rendering Module
           </p>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-2 gap-3 mt-6 mb-8 bg-slate-100 dark:bg-slate-900/60 p-1.5 rounded-xl border border-slate-200/60 dark:border-slate-800/60">
+=======
+        
+          <div className="grid grid-cols-2 gap-3 mt-6 mb-8 bg-slate-100 dark:bg-slate-900/60 p-1.5 rounded-xl border border-slate-200/60 dark:border-slate-800/60">
+          
+>>>>>>> 500d3e4c08bb0974c340652743bcf165c1eb82bc
             <label
               className={`flex items-center justify-center gap-2 py-3 px-4 rounded-lg font-sans text-sm font-bold tracking-wide transition-all cursor-pointer select-none border ${
                 role === "student"
@@ -51,11 +57,15 @@ const DynamicForm = () => {
                 value="student"
                 checked={role === "student"}
                 onChange={(e) => setRole(e.target.value)}
-                className="sr-only" // Hidden visually, but perfectly accessible to screen readers
+                className="sr-only"
               />
               🎓 Student Member
             </label>
 
+<<<<<<< HEAD
+=======
+         
+>>>>>>> 500d3e4c08bb0974c340652743bcf165c1eb82bc
             <label
               className={`flex items-center justify-center gap-2 py-3 px-4 rounded-lg font-sans text-sm font-bold tracking-wide transition-all cursor-pointer select-none border ${
                 role === "teacher"
@@ -75,9 +85,17 @@ const DynamicForm = () => {
             </label>
           </div>
 
+<<<<<<< HEAD
           <form className="space-y-5 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 p-6 rounded-2xl shadow-xl shadow-slate-100 dark:shadow-black/20 transition-all duration-300">
             {role === "student" ? (
               <div className="space-y-5 animate-fade-in">
+=======
+       
+          <form className="space-y-5 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 p-6 rounded-2xl shadow-xl shadow-slate-100 dark:shadow-black/20 transition-all duration-300">
+            {role === "student" ? (
+              <div className="space-y-5 animate-fade-in">
+           
+>>>>>>> 500d3e4c08bb0974c340652743bcf165c1eb82bc
                 <div>
                   <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
                     Full Name
@@ -108,7 +126,7 @@ const DynamicForm = () => {
                   />
                 </div>
 
-                {/* Class Input */}
+            
                 <div>
                   <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
                     Assigned Class
@@ -126,7 +144,7 @@ const DynamicForm = () => {
               </div>
             ) : role === "teacher" ? (
               <div className="space-y-5 animate-fade-in">
-                {/* Subject Selection Menu */}
+               
                 <div>
                   <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
                     Department Subject
@@ -144,7 +162,7 @@ const DynamicForm = () => {
                   </select>
                 </div>
 
-                {/* Lecture Time Input */}
+              
                 <div>
                   <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
                     Scheduled Lecture Time
@@ -160,7 +178,7 @@ const DynamicForm = () => {
                 </div>
               </div>
             ) : (
-              /* Empty Standby Notification Wrapper Box */
+              
               <div className="py-8 text-center flex flex-col items-center justify-center text-slate-400 dark:text-slate-500">
                 <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-950 flex items-center justify-center border border-slate-200 dark:border-slate-800 text-lg mb-2">
                   ⚡
