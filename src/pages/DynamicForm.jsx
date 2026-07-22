@@ -37,13 +37,7 @@ const DynamicForm = () => {
             Conditional Rendering Module
           </p>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-2 gap-3 mt-6 mb-8 bg-slate-100 dark:bg-slate-900/60 p-1.5 rounded-xl border border-slate-200/60 dark:border-slate-800/60">
-=======
-        
-          <div className="grid grid-cols-2 gap-3 mt-6 mb-8 bg-slate-100 dark:bg-slate-900/60 p-1.5 rounded-xl border border-slate-200/60 dark:border-slate-800/60">
-          
->>>>>>> 500d3e4c08bb0974c340652743bcf165c1eb82bc
             <label
               className={`flex items-center justify-center gap-2 py-3 px-4 rounded-lg font-sans text-sm font-bold tracking-wide transition-all cursor-pointer select-none border ${
                 role === "student"
@@ -62,10 +56,6 @@ const DynamicForm = () => {
               🎓 Student Member
             </label>
 
-<<<<<<< HEAD
-=======
-         
->>>>>>> 500d3e4c08bb0974c340652743bcf165c1eb82bc
             <label
               className={`flex items-center justify-center gap-2 py-3 px-4 rounded-lg font-sans text-sm font-bold tracking-wide transition-all cursor-pointer select-none border ${
                 role === "teacher"
@@ -85,17 +75,9 @@ const DynamicForm = () => {
             </label>
           </div>
 
-<<<<<<< HEAD
           <form className="space-y-5 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 p-6 rounded-2xl shadow-xl shadow-slate-100 dark:shadow-black/20 transition-all duration-300">
             {role === "student" ? (
               <div className="space-y-5 animate-fade-in">
-=======
-       
-          <form className="space-y-5 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 p-6 rounded-2xl shadow-xl shadow-slate-100 dark:shadow-black/20 transition-all duration-300">
-            {role === "student" ? (
-              <div className="space-y-5 animate-fade-in">
-           
->>>>>>> 500d3e4c08bb0974c340652743bcf165c1eb82bc
                 <div>
                   <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
                     Full Name
